@@ -1,22 +1,10 @@
 import * as algo from "./arrays";
 
-const myarr: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+let array = [5, 6, 7, 8, 9, 10, 1, 2, 3];
+let another = [30, 40, 50, 10, 20];
 
-function blockSwapArray(arr: any[], times: number): any[] {
-  if (arr.length === 0) return [];
+const buff = new ArrayBuffer(50);
 
-  let A = [];
-  let B = [];
+buff[2] = 50;
 
-  for (let i = 0; i <= times - 1; i++) {
-    A.push(arr[i]);
-  }
-
-  for (let i = times; i <= arr.length - 1; i++) {
-    B.push(arr[i]);
-  }
-
-  return [A,B];
-}
-
-console.log(blockSwapArray(myarr, 2));
+console.log(buff);
