@@ -1,3 +1,4 @@
+import { doThisManyTimes } from "../utils";
 // Shift the elements of array by one
 export function leftRotateArrayByOne(arr: any[]): any[] {
   if (arr.length <= 0) return [];
@@ -54,4 +55,31 @@ export function rightRotateByReversalAlgorithum(
   }
 
   return reverseArray(combinedReversedArray);
+}
+
+export function checkIfTheElementIsInTheArray(
+  el: number,
+  arr: number[]
+): boolean {
+  for (let i of arr) {
+    if (el === i) {
+      return true;
+    }
+  }
+  return false;
+}
+
+export function arrangeArrayAccordingToIndex(arr: number[]) {
+  const final: number[] = [];
+
+  doThisManyTimes(arr.length, (no) => {
+    const itIs = checkIfTheElementIsInTheArray(no, arr);
+    if (itIs) {
+      final.push(no);
+    } else {
+      final.push(-1);
+    }
+  });
+
+  return final;
 }
