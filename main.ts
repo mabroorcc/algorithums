@@ -1,5 +1,5 @@
 import * as algo from "./arrays";
 
-const arr = [-1, -1, 6, 1, 9, 3, 2, -1, 4, -1];
+const arr = [1, 2, 0, 4, 3, 0, 5, 0];
 
-console.log(algo.arrangeArrayAccordingToIndex(arr));
+console.log(algo.moveThisNumberToTheEnd(0, arr));

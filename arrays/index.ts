@@ -83,3 +83,27 @@ export function arrangeArrayAccordingToIndex(arr: number[]) {
 
   return final;
 }
+
+export function moveThisNumberToTheEnd(num: number, arr: number[]): number[] {
+  // move from left to right
+  for (let i = 0; i < arr.length; i++) {
+    // if the num is found
+    if (arr[i] === num) {
+      // move from left to right
+      for (let j = arr.length - 1; j >= 0; j--) {
+        // if the position is similar means all nums are reached at the end
+        if (j === i) {
+          return arr;
+        } else if (arr[j] !== num) {
+          //swap
+          let x = arr[j];
+          arr[j] = arr[i];
+          arr[i] = x;
+          // stop moving right to left
+          break;
+        }
+      }
+    }
+  }
+  return arr;
+}
