@@ -89,7 +89,7 @@ export function moveThisNumberToTheEnd(num: number, arr: number[]): number[] {
   for (let i = 0; i < arr.length; i++) {
     // if the num is found
     if (arr[i] === num) {
-      // move from left to right
+      // move from right to left
       for (let j = arr.length - 1; j >= 0; j--) {
         // if the position is similar means all nums are reached at the end
         if (j === i) {
