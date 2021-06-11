@@ -5,11 +5,17 @@
   "repository": "https://github.com/mabroor007/algorithums.git",
   "author": "mabroor007 <amabroor007@gmail.com>",
   "scripts": {
-    "start":"ts-node main.ts"
+    "start": "ts-node main.ts",
+    "test": "jest --watch"
   },
   "license": "MIT",
   "devDependencies": {
     "ts-node": "^9.1.1",
     "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "@types/jest": "^26.0.23",
+    "jest": "^27.0.4",
+    "ts-jest": "^27.0.3"
   }
 }
