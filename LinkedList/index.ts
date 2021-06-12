@@ -15,12 +15,12 @@ export class LinkedList {
     return node;
   }
 
-  loopOverNodes(fn: (node: Node | null) => void) {
+  loopOverNodes(fn: (node: Node | null, prev?: Node) => void) {
     let currNode: Node | null = this.Head;
     if (currNode === null) return fn(null);
     if (currNode.next === null) return fn(currNode);
     do {
-      fn(currNode);
+      fn(currNode.next, currNode);
       currNode = currNode.next;
     } while (currNode);
   }
