@@ -1,5 +1,12 @@
-import * as algo from "./arrays";
+import { BinaryTree } from "./BinaryTree";
 
-const arr = [1, 2, 0, 4, 3, 0, 5, 0];
+const bt = new BinaryTree();
 
-console.log(algo.moveThisNumberToTheEnd(0, arr));
+bt.insert(234);
+bt.insert(94);
+bt.insert(4);
+bt.insert(2);
+bt.insert(200);
+bt.insert(24);
+
+bt.traverseWholeTree((node) => console.log(node.data));
